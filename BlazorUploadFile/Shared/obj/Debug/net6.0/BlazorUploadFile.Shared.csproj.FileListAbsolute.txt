@@ -1,0 +1,12 @@
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\bin\Debug\net6.0\BlazorUploadFile.Shared.deps.json
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\bin\Debug\net6.0\BlazorUploadFile.Shared.dll
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\bin\Debug\net6.0\BlazorUploadFile.Shared.pdb
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\BlazorUploadFile.Shared.csproj.AssemblyReference.cache
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\BlazorUploadFile.Shared.GeneratedMSBuildEditorConfig.editorconfig
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\BlazorUploadFile.Shared.AssemblyInfoInputs.cache
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\BlazorUploadFile.Shared.AssemblyInfo.cs
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\BlazorUploadFile.Shared.csproj.CoreCompileInputs.cache
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\BlazorUploadFile.Shared.dll
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\refint\BlazorUploadFile.Shared.dll
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\BlazorUploadFile.Shared.pdb
+G:\NimaZare\MyCodes\Blazor\BlazorUploadFile\BlazorUploadFile\Shared\obj\Debug\net6.0\ref\BlazorUploadFile.Shared.dll
