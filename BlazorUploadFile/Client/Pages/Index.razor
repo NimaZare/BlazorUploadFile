@@ -1,0 +1,60 @@
+﻿@page "/"
+@using System.Net.Http.Headers
+@using BlazorUploadFile.Shared
+@inject HttpClient Http
+
+<PageTitle>Index, File Upload</PageTitle>
+
+<h1>Upload Files!</h1>
+
+<InputFile OnChange="@OnInputFileChange" multiple />
+
+@if (FileNames.Count > 0)
+{
+	<ul>
+		@foreach (var fileName in FileNames)
+		{
+			<li>
+				File: @fileName
+				<br />
+				<span>Strored File Name:  @GetStoredFileName(fileName)</span>
+			</li>
+		}
+	</ul>
+}
+
+@code {
+	private Int32 maxAllowedFiles = Int32.MaxValue;
+	private Int64 maxFileSize = Int64.MaxValue;
+	private List<String> FileNames = new();
+	private List<UploadResult> uploadResults = new();
+
+	private async Task OnInputFileChange(InputFileChangeEventArgs e)
+	{
+		using var content = new MultipartFormDataContent();
+		foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+		{
+			var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
+			fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+			FileNames.Add(file.Name);
+			content.Add(content: fileContent, name: "\"files\"", fileName: file.Name);
+		}
+
+		var response = await Http.PostAsync("/api/File", content);
+		var newUploadResults = await response.Content.ReadFromJsonAsync<List<UploadResult>>();
+
+		if (newUploadResults is not null)
+		{
+			uploadResults = uploadResults.Concat(newUploadResults).ToList();
+		}
+	}
+
+	private String? GetStoredFileName(String fileName)
+	{
+		var uploadResult = uploadResults.SingleOrDefault(f => f.FileName == fileName);
+		if (uploadResult is not null)
+			return uploadResult.StoredFileName;
+
+		return "File not found.";
+	}
+}
